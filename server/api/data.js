@@ -13,6 +13,9 @@ const corsOption = {
 app.use(cors(corsOption));
 app.use(express.json());
 connectdatabase();
+app.get('/',(req,res)=>{
+    res.send('<h1>correct</h1>')
+})
 app.use('/api/v1', datas);
 
 module.exports = app;
